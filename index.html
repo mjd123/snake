@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    </head>
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        #gameScreen {
+            border: 1px solid black;
+        }
+        .score {
+            color: black;
+        }
+        .game_over {
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: black;
+            height: 610px;
+            width: 810px;
+            display: none;
+        }
+
+        .show {
+            display: flex;
+            position: absolute;
+            top: 0;
+        }
+        .game_over > * {
+            width: 100%;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        .game_over_text {
+            font-size: 50px;
+        }
+        .game_over_score {
+            align-self: start;
+            font-size: 30px;
+        }
+        .restart {
+            align-self: end;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .restart:hover {
+            color: blue;
+        }
+    </style>
+    <body>
+        <canvas id="gameScreen" width="800" height="600"></canvas>
+        <p class="score"></p>
+        <div class="game_over">
+            <p class="game_over_text">Game Over</p>
+            <p class="game_over_score"></p>
+            <p class="restart">Restart</p>
+        </div>
+    </body>
+    <script type="module" src="/src/index.js"></script>
+</html>
